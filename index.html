@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <title>Documentação</title>
+    <link rel="stylesheet"  href="styles.css">
+  </head>
+  <body>
+     
+    <nav id="navbar"> 
+      <header>JS Documentation</header>  
+      <ul>
+     <li> <a class="nav-link" href="#Introduction">Introdução</a></li>
+
+      <li><a class="nav-link"  href="#Hello_world">Olá, Mundo!</a></li>
+
+      <li><a class="nav-link"  href="#Variables">Variaveis</a></li>
+
+     <li> <a class="nav-link"  href="#Declaring_variables">Declarando Variáveis</a></li>
+
+      <li><a class="nav-link" href="#Variable_scope">Variable scope</a></li>
+        </ul>
+     </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introdução</header>
+        <p>JavaScript é uma linguagem de script multiplataforma orientada a objetos. É uma linguagem pequena e leve. Dentro de um ambiente host (por exemplo, um navegador web), o JavaScript pode ser conectado aos objetos de seu ambiente para fornecer controle programático sobre eles.</p>
+        <p>JavaScript contém uma biblioteca padrão de objetos, como Array, Date e Math, e um conjunto básico de elementos de linguagem, como operadores, estruturas de controle e instruções. O JavaScript principal pode ser estendido para diversos propósitos, complementando-o com objetos adicionais; por exemplo:</p>
+        <ul>
+          <li>O JavaScript do lado do cliente estende a linguagem principal, fornecendo objetos para controlar um navegador e seu Document Object Model (DOM). Por exemplo, as extensões do lado do cliente permitem que um aplicativo coloque elementos em um formulário HTML e responda a eventos do usuário, como cliques do mouse, entrada de formulário e navegação na página.</li>
+          <li>O JavaScript do lado do servidor estende a linguagem principal, fornecendo objetos relevantes para a execução do JavaScript em um servidor. Por exemplo, as extensões do lado do servidor permitem que um aplicativo se comunique com um banco de dados, forneça continuidade de informações de uma invocação para outra do aplicativo ou execute manipulações de arquivos em um servidor.</li>
+        </ul>
+        <p>Este guia pressupõe que você tenha os seguintes conhecimentos básicos:</p>
+        <ul>
+          <li>Uma compreensão geral da Internet e da World Wide Web (WWW).</li>
+          <li>Bons conhecimentos práticos de HyperText Markup Language (HTML).</li>
+          <li>Alguma experiência em programação. Se você é novo em programação, experimente um dos tutoriais vinculados na página principal sobre JavaScript.</li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="Hello_world">
+        <header>Olá, Mundo!</header>
+        <p>Para começar a escrever JavaScript, abra o Scratchpad e escreva seu primeiro código JavaScript "Olá, mundo":</p>
+        <code>function greetMe(yourName) { alert("Hello " + yourName); }<br>
+greetMe("World");
+</code>
+        <p>Selecione o código no pad e pressione Ctrl+R para vê-lo se desenrolar em seu navegador!</p>
+      </section>
+
+      <section class="main-section" id="Variables">
+        <header>Variáveis</header>
+        <p>Você usa variáveis como nomes simbólicos para valores em seu aplicativo. Os nomes das variáveis, chamados identificadores, obedecem a certas regras.</p>
+         <p>Um identificador JavaScript deve começar com uma letra, sublinhado (_) ou cifrão ($); os caracteres subsequentes também podem ser dígitos (0-9). Como o JavaScript diferencia maiúsculas de minúsculas, as letras incluem os caracteres de "A" a "Z" (maiúsculas) e os caracteres de "a" a "z" (minúsculas).</p>
+          <p>Você pode usar letras ISO 8859-1 ou Unicode, como å e ü, em identificadores. Você também pode usar as sequências de escape Unicode como caracteres em identificadores. Alguns exemplos de nomes legais são Number_hits, temp99 e _name.</p>
+      </section>
+      <section class="main-section" id="Declaring_variables">
+        <header>Declarando Variáveis</header>
+        <p>Você pode declarar uma variável de três maneiras:</p>
+        <p>Com a palavra-chave var. Por exemplo:</p>
+        <code>var x = 42.</code>
+
+        <p>Esta sintaxe pode ser usada para declarar variáveis locais e globais.</p>
+        <p>Simplesmente atribuindo-lhe um valor. Por exemplo:</p>
+        <code>x = 42.</code>
+        <p>Isso sempre declara uma variável global. Ele gera um aviso estrito de JavaScript. Você não deve usar esta variante.</p>
+        <p>Com a palavra-chave let. Por exemplo:</p>
+        <code>let y = 13.</code>
+        <p>Esta sintaxe pode ser usada para declarar uma variável local de escopo de bloco. Consulte Escopo da variável abaixo.</p>
+      </section>
+      <section class="main-section" id="Variable_scope">
+        <header>Variable scope</header>
+        <p>Quando você declara uma variável fora de qualquer função, ela é chamada de variável global, porque está disponível para qualquer outro código no documento atual. Quando você declara uma variável dentro de uma função, ela é chamada de variável local, porque está disponível apenas dentro dessa função.</p>
+        <p>JavaScript antes do ECMAScript 2015 não possui escopo de instrução de bloco; em vez disso, uma variável declarada dentro de um bloco é local para a função (ou escopo global) na qual o bloco reside. Por exemplo, o código a seguir registrará 5, porque o escopo de x é a função (ou contexto global) dentro da qual x é declarado, não o bloco, que neste caso é uma instrução if.</p>
+        <code>if (true) { var x = 5; } console.log(x); // 5</code>
+        <p>Esse comportamento muda ao usar a declaração let introduzida no ECMAScript 2015.</p>
+        <code>if (true) { let y = 5; } console.log(y); // ReferenceError: y is<br>
+not defined</code>
+      </section>
+      <footer>
+        <p>Autora: Izaiany</p>
+      </footer>
+    </main>
+    
+  </body>
+</html>
